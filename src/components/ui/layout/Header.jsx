@@ -1,5 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
+import { gsap } from "gsap";
+
+import { throttle } from "lodash";
 
 import { navLogo, navLinks } from "@/components/ui/data/layout";
 
@@ -11,23 +15,100 @@ import { ChevronRight } from "lucide-react";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const timeoutRef = useRef(null);
+  const timeoutRefs = useRef([]);
+  const [isSticky, setIsSticky] = useState(false);
+  const headerRef = useRef(null);
+  const dropdownRefs = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      if (window.scrollY > 200) {
+        setIsSticky(true);
+        gsap.to(headerRef.current, {
+          backgroundColor: "#ffffff",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          duration: 1,
+          ease: "power3.out",
+        });
+      } else {
+        setIsSticky(false);
+        gsap.to(headerRef.current, {
+          backgroundColor: "transparent",
+          boxShadow: "none",
+          duration: 1,
+          ease: "power3.out",
+        });
+      }
+    }, 100);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      handleScroll.cancel();
+    };
+  }, []);
 
   const handleMouseEnter = (index) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+    if (timeoutRefs.current[index]) {
+      clearTimeout(timeoutRefs.current[index]);
     }
     setActiveDropdown(index);
+    gsap.to(dropdownRefs.current[index], {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      pointerEvents: "auto",
+    });
+    navLinks.forEach((_, idx) => {
+      if (idx !== index && dropdownRefs.current[idx]) {
+        gsap.to(dropdownRefs.current[idx], {
+          opacity: 0,
+          y: -20,
+          duration: 0.3,
+          ease: "power2.in",
+          pointerEvents: "none",
+        });
+      }
+    });
   };
 
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
+  const handleMouseLeave = (index) => {
+    timeoutRefs.current[index] = setTimeout(() => {
       setActiveDropdown(null);
-    }, 200); // Delay of 200ms
+      gsap.to(dropdownRefs.current[index], {
+        opacity: 0,
+        y: -20,
+        duration: 0.3,
+        ease: "power2.in",
+        pointerEvents: "none",
+      });
+    }, 200);
   };
+
+  useEffect(() => {
+    const currentTimeouts = timeoutRefs.current;
+
+    return () => {
+      navLinks.forEach((_, idx) => {
+        if (currentTimeouts[idx]) {
+          clearTimeout(currentTimeouts[idx]);
+        }
+      });
+    };
+  }, []);
 
   return (
-    <header className="py-4 relative z-50">
+    <header
+      ref={headerRef}
+      className={`py-4 w-full transition-all duration-300 transform ${
+        isSticky
+          ? "sticky top-0 left-0 z-50 bg-background shadow-md"
+          : "relative bg-transparent z-50"
+      }`}
+      style={{ transition: "transform 0.3s ease-in-out" }}
+    >
       <nav className="max-w-[1170px] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           {navLogo.map((logoItem, index) => (
@@ -47,9 +128,9 @@ const Header = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="relative"
+              className={`${activeDropdown === index ? "text-primary" : ""}`}
               onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
               <Link
                 href={link.href}
@@ -106,13 +187,11 @@ const Header = () => {
           link.items && (
             <div
               key={index}
-              className={`absolute left-0 top-full w-full bg-background z-20 transition-opacity duration-300 ${
-                activeDropdown === index
-                  ? "opacity-100"
-                  : "opacity-0 pointer-events-none"
-              }`}
+              ref={(el) => (dropdownRefs.current[index] = el)}
+              className="absolute left-0 top-full w-full bg-background z-20 opacity-0 pointer-events-none"
+              style={{ transform: "translateY(-20px)" }}
               onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
               <div className="container mx-auto py-6 px-4 flex flex-wrap">
                 <div className="w-full md:w-4/5 grid grid-cols-2 gap-10">

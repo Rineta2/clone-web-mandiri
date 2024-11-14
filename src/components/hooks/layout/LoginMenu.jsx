@@ -2,10 +2,10 @@ import { LockKeyhole, ChevronDown } from "lucide-react";
 
 export default function LoginMenu({ isOpen, onClick }) {
   return (
-    <div className="relative">
+    <>
       <div
         onClick={onClick}
-        className="flex items-center gap-2 cursor-pointer text-foreground ml-5 h-20 fixed top-0 right-64 bg-secondary px-4 rounded-b-lg hover:bg-secondary/90 transition-colors"
+        className="flex items-center gap-2 cursor-pointer text-foreground ml-5 h-20 absolute top-0 right-[-13%] bg-secondary px-4 rounded-b-lg hover:bg-secondary/90 transition-colors"
       >
         <LockKeyhole aria-hidden="true" />
         <span>Login</span>
@@ -27,6 +27,6 @@ export default function LoginMenu({ isOpen, onClick }) {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

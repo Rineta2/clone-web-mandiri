@@ -24,7 +24,7 @@ export default function NavInner() {
   const isMenuOpen = (menu) => activeMenu === menu;
 
   return (
-    <nav className="flex justify-between items-center gap-4 px-6 max-w-[1170px] py-2 mx-auto w-full">
+    <nav className="relative flex justify-between items-center gap-4 px-6 max-w-[1170px] py-2 mx-auto w-full">
       <LanguageSwitcher />
       <SearchBar placeholder="Search" />
 
@@ -38,11 +38,13 @@ export default function NavInner() {
             isOpen={isMenuOpen("location")}
             onClick={() => handleMenuClick("location")}
           />
+
           <ContactMenu
             isOpen={isMenuOpen("contact")}
             onClick={() => handleMenuClick("contact")}
           />
         </div>
+
         <LoginMenu
           isOpen={isMenuOpen("login")}
           onClick={() => handleMenuClick("login")}

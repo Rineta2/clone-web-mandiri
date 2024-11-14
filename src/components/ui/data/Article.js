@@ -1,6 +1,7 @@
 import img1 from "@/components/assest/article/img1.jpeg";
 import img2 from "@/components/assest/article/img2.jpeg";
 import img3 from "@/components/assest/article/img3.jpeg";
+import singeImg from "@/components/assest/article/logo-mandiri-digital.png"
 
 export const articleData = [
   {
@@ -34,5 +35,15 @@ export const articleData = [
     desc: "Bank Mandiri terus berkomitmen untuk memperluas aksesibilitas layanan perbankan bagi masyarakat Indonesia, baik di dalam negeri maupun",
     name: "Selengkapnya",
     slug: "super-bank-mandiri-bawa-solusi-perbankan-digital-dan-reward-menarik-bagi-diaspora-di-houston-as"
+  }
+]
+
+export const singleData = [
+  {
+    img: singeImg,
+    title: "Mandiri jadi Digital",
+    desc: "Terus memantapkan diri menjadi yang terdepan dalam arus perkembangan teknologi dan informasi. Bank Mandiri tak hentinya berbenah untuk maju melalui transformasi, inovasi, keamanan data, dan sumber daya manusia yang unggul. Memberikan makna bagi kehidupan yang lebih baik.",
+    name: "Selengkapnya",
+    slug: "mandiri-jadi-digital"
   }
 ]
