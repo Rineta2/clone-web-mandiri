@@ -28,16 +28,16 @@ const Header = () => {
 
   return (
     <header className="py-4 relative z-50">
-      <nav className="container mx-auto flex justify-between items-center p-4">
+      <nav className="max-w-[1170px] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           {navLogo.map((logoItem, index) => (
             <Image
               key={index}
               src={logoItem.img}
               alt="Logo"
-              className="h-8"
-              width={100}
-              height={100}
+              className="object-contain"
+              width={150}
+              height={150}
             />
           ))}
         </div>

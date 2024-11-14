@@ -24,7 +24,7 @@ export default function NavInner() {
   const isMenuOpen = (menu) => activeMenu === menu;
 
   return (
-    <nav className="flex justify-between items-center gap-4 px-6 container py-2 mx-auto w-full">
+    <nav className="flex justify-between items-center gap-4 px-6 max-w-[1170px] py-2 mx-auto w-full">
       <LanguageSwitcher />
       <SearchBar placeholder="Search" />
 

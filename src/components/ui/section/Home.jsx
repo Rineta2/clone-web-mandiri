@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="relative min-h-[80vh] overflow-hidden">
-      <div className="container px-10">
+      <div className="max-w-[1140px] mx-auto px-10">
         <div className="absolute top-0 left-0 w-full h-full z-[-1] -mt-20 filter brightness-[0.8]">
           {homeImg.map((item) => {
             return (
