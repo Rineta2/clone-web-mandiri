@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 
-import NavInner from "@/components/ui/layout/NavInner";
+import NavInner from "@/components/ui/layout/navInner";
 
 import Header from "@/components/ui/layout/Header";
 
