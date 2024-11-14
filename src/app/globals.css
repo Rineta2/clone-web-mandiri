@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1440px;
 }
 
 html {
@@ -53,4 +53,12 @@ html {
 
 .animate-slide-up {
   animation: slide-up 0.3s ease-out;
+}
+
+section {
+  padding: 6rem 1rem;
+
+  @media only screen and (min-width: 768px) {
+    padding: 10rem 2rem;
+  }
 }

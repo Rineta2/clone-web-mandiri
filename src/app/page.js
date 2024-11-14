@@ -1,9 +1,13 @@
 import React, { Fragment } from "react";
 
+import Home from "@/components/ui/section/Home";
+
 export default function LocalePage() {
   return (
     <main>
-      <h1>Welcome</h1>
+      <Fragment>
+        <Home />
+      </Fragment>
     </main>
   );
 }
