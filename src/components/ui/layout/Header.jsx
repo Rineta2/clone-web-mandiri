@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="py-4 relative">
+    <header className="py-4 relative z-50">
       <nav className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           {navLogo.map((logoItem, index) => (
