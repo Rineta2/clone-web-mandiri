@@ -62,3 +62,46 @@ section {
     padding: 7rem 2rem;
   }
 }
+
+/* Tambahkan ini di file CSS Anda */
+.parallax {
+  background-image: url("../components/assest/promotion/bg_butterfly_blur.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top {
+  width: 100%;
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.bottom {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.bottom .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.bottom .swiper-slide-thumb-active {
+  opacity: 1;
+}

@@ -7,6 +7,23 @@ const nextConfig = {
         hostname: "www.mandirikartukredit.com",
         pathname: "/uploads/media/banner/**",
       },
+      {
+        protocol: "https",
+        hostname: "swiperjs.com",
+        pathname: "/demos/images/**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "cdn.jsdelivr.net",
+        pathname: "/**",
+      },
     ],
   },
 };
