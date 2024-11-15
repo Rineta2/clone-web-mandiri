@@ -8,6 +8,8 @@ import Promotions from "@/app/promotions/page";
 
 import Kurs from "@/components/ui/section/Kurs";
 
+import Faq from "@/components/ui/section/Faq";
+
 export default function LocalePage() {
   return (
     <main>
@@ -16,6 +18,7 @@ export default function LocalePage() {
         <Article />
         <Promotions />
         <Kurs />
+        <Faq />
       </Fragment>
     </main>
   );
