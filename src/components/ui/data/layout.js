@@ -11,14 +11,14 @@ export const navLogo = [
 export const navLinks = [
   {
     title: "Perseorangan",
-    href: "/Perseorangan",
+    href: "/pages/perseorangan",
     items: [
       {
         title: "Simpanan",
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Dapatkan keuntungan dan kenyamanan yang lebih baik dengan berbagai solusi simpanan dari Bank Mandiri untuk Anda",
-        href: "/Perseorangan/Simpanan",
+        href: "/pages/perseorangan/simpanan",
         animateIcon: true,
       },
 
@@ -27,7 +27,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda",
-        href: "/Perseorangan/Pinjaman",
+        href: "/pages/perseorangan/pinjaman",
         animateIcon: false,
       },
 
@@ -36,7 +36,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Percayakan perlindungan diri Anda dan keluarga serta investasi dengan berbagai produk investasi & asuransi kami",
-        href: "/Perseorangan/Investasi-Asuransi",
+        href: "/pages/perseorangan/investasi-asuransi",
         animateIcon: true,
       },
 
@@ -44,7 +44,7 @@ export const navLinks = [
         title: "Pengiriman Uang",
         icons: <ExternalLink className="w-6 h-6" />,
         description: "Layanan pengiriman dan penerimaan uang secara mudah dan",
-        href: "/Perseorangan/Pengiriman-Uang",
+        href: "/pages/perseorangan/pengiriman-uang",
         animateIcon: false,
       },
 
@@ -53,7 +53,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda",
-        href: "/Perseorangan/Pinjaman",
+        href: "/pages/perseorangan/pinjaman",
         animateIcon: true,
       },
 
@@ -62,7 +62,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Miliki Kartu Mandiri Debit dan dapatkan kemudahan, kenyamanan serta keamanan dalam bertransaksi di dalam",
-        href: "/Perseorangan/Kartu-Debit",
+        href: "/pages/perseorangan/kartu-debit",
         animateIcon: true,
       },
 
@@ -71,7 +71,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Mandiri e-banking memungkinkan Anda bertransaksi dengan mudah kapan saja dan dimana saja",
-        href: "/Perseorangan/E-Banking",
+        href: "/pages/perseorangan/e-banking",
         animateIcon: true,
       },
 
@@ -80,14 +80,14 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Sebuah dedikasi Bank Mandiri bagi nasabah tercinta dengan",
-        href: "/Perseorangan/Smart-Branch",
+        href: "/pages/perseorangan/smart-branch",
         animateIcon: true,
       },
     ],
     quickActions: [
       {
         title: "Tarif Layanan",
-        href: "/Perseorangan/Tarif-Layanan",
+        href: "/pages/perseorangan/tarif-layanan",
         icons: (
           <Banknote className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
@@ -97,7 +97,7 @@ export const navLinks = [
         icons: (
           <QrCode className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
-        href: "/Perseorangan/Tabungan-Now",
+        href: "/pages/perseorangan/tabungan-now",
       },
     ],
   },
