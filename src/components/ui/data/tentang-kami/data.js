@@ -6,7 +6,7 @@ import Investor_Relations from "@/components/assest/tentang-mandiri/Investor_Rel
 import GCG from "@/components/assest/tentang-mandiri/GCG.jpg";
 import TJSL from "@/components/assest/tentang-mandiri/TJSL_Bank_Mandiri.jpg";
 import Mandiri_Group from "@/components/assest/tentang-mandiri/Mandiri_Group.jpg";
-import Karir from "@/components/assest/tentang-mandiri/karir.jpg";
+// import Karir from "@/components/assest/tentang-mandiri/karir.jpg";
 import Mandiri_University from "@/components/assest/tentang-mandiri/Mandiri_University.jpg";
 import Pengadaan from "@/components/assest/tentang-mandiri/Pengadaan.jpg";
 import Kebijakan_Privasi from "@/components/assest/tentang-mandiri/Kebijakan_Privasi.jpg";
@@ -60,13 +60,13 @@ export const box = [
     slug: "/pages/perseorangan/e-banking",
   },
 
-  {
-    name: "Karir",
-    icons: <ChevronRight />,
-    desc: "Miliki pengalaman kerja di dunia perbankan dengan kompetensi kelas dunia, lingkungan kerja yang ramah dan menghargai setiap ide",
-    img: Karir,
-    slug: "karir",
-  },
+  // {
+  //   name: "Karir",
+  //   icons: <ChevronRight />,
+  //   desc: "Miliki pengalaman kerja di dunia perbankan dengan kompetensi kelas dunia, lingkungan kerja yang ramah dan menghargai setiap ide",
+  //   img: Karir,
+  //   slug: "karir",
+  // },
 
   {
     name: "Mandiri University",
