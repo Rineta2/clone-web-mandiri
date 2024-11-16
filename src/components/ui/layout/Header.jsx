@@ -112,14 +112,15 @@ const Header = () => {
       <nav className="max-w-[1170px] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           {navLogo.map((logoItem, index) => (
-            <Image
-              key={index}
-              src={logoItem.img}
-              alt="Logo"
-              className="object-contain"
-              width={150}
-              height={150}
-            />
+            <Link href={"/"} key={index}>
+              <Image
+                src={logoItem.img}
+                alt="Logo"
+                className="object-contain"
+                width={150}
+                height={150}
+              />
+            </Link>
           ))}
         </div>
 

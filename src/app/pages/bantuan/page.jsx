@@ -1,44 +1,63 @@
+"use client";
+
 import React, { Fragment } from "react";
 
-import bg from "@/components/assest/bantuan/bg.jpg";
-
-import Image from "next/image";
-
 import Link from "next/link";
+
+import Background from "@/components/hooks/section/pages/bantuan/Background";
+
+import Toolbar from "@/components/hooks/section/pages/bantuan/Toolbar";
+
+import Text from "@/components/hooks/section/pages/bantuan/Text";
+
+import Accordion from "@/components/hooks/section/pages/bantuan/Accordion";
+
+import { debitHilang, kreditHilang } from "@/components/ui/data/bantuan/data";
 
 export default function Bantuan() {
   return (
     <Fragment>
       <section className="relative min-h-[60vh]">
         <div className="container px-12 mx-auto">
-          <div className="absolute top-4 left-[20.8%] flex items-center gap-2">
-            <Link href="/" className="text-background text-[18px]">
-              Home
-            </Link>
-            <div className="text-background text-[20px]"> / </div>
-            <span className="text-background text-[16px]">Bantuan</span>
-          </div>
+          <Toolbar />
+          <Text />
+          <Background />
+        </div>
+      </section>
 
-          <div className="absolute top-[50%] translate-y-[-50%] left-[20.8%] flex flex-col gap-2">
-            <h1
-              className="text-5xl text-background mb-4"
+      <section>
+        <div className="max-w-[1000px] mx-auto">
+          <div className="mb-10">
+            <Link
+              href={"#"}
+              className="bg-[#04006e] text-background py-10 px-20 rounded-lg text-[20px] font-semibold"
               style={{
-                lineHeight: "1.5",
+                boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
               }}
             >
-              Bantuan & FAQ
-            </h1>
+              Kartu Debit Hilang?
+            </Link>
 
-            <p className="text-[20px] text-background max-w-[70%]">
-              Kami siap untuk melayani dan menjawab pertanyaan Anda.
-            </p>
+            <Accordion items={debitHilang} />
           </div>
 
-          <div className="absolute inset-0 -z-[1] opacity-90 brightness-[0.8]">
-            <Image src={bg} alt="bg" layout="fill" objectFit="cover" />
+          <div className="mt-32">
+            <Link
+              href={"#"}
+              className="bg-[#04006e] text-background py-10 px-20 rounded-lg text-[20px] font-semibold"
+              style={{
+                boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              Kartu Kredit Hilang?
+            </Link>
+
+            <Accordion items={kreditHilang} prefix="kredit" />
           </div>
         </div>
       </section>
+
+      <section></section>
     </Fragment>
   );
 }
