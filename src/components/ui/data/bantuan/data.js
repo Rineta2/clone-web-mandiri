@@ -1,3 +1,8 @@
+import panduan from "@/components/assest/bantuan/panduan.png";
+import education from "@/components/assest/bantuan/education.png";
+
+import { ChevronRight } from "lucide-react";
+
 export const debitHilang = [
   {
     id: 1,
@@ -349,3 +354,25 @@ export const kreditHilang = [
     ],
   },
 ];
+
+export const blog = [
+  {
+    id: 1,
+    img: panduan,
+    title: "Media Penyampaian Pengaduan Nasabah",
+    desc: "Bank Mandiri menyediakan Mekanisme Penyampaian Pengaduan jika nasabah mengalami kendala ketika bertransaksi.",
+    name: "Selengkapnya",
+    slug: "pages/bantuan/panduan",
+    icons: <ChevronRight size={24} />
+  },
+
+  {
+    id: 2,
+    img: education,
+    title: "Edukasi Keamanan Transaksi",
+    desc: "Bank Mandiri senantiasa memberikan edukas mengenaik keamanan transaksi dan jaga data rahasia",
+    name: "Selengkapnya",
+    slug: "pages/bantuan/education",
+    icons: <ChevronRight size={24} />
+  }
+]

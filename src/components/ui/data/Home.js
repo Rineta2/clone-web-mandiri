@@ -29,7 +29,7 @@ export const homeCard = [
     img: wallet,
     title: "Jelajahi keunggulan produk mandiri kartu kredit",
     icons: <ChevronRight size={24} />,
-    href: "/produk",
+    href: "https://www.mandirikartukredit.com/",
   },
 
   {
