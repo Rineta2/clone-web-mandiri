@@ -10,6 +10,7 @@ export const navLogo = [
 
 export const navLinks = [
   {
+    name: "Perseorangan",
     title: "Perseorangan",
     href: "/pages/perseorangan",
     items: [
@@ -102,15 +103,16 @@ export const navLinks = [
     ],
   },
   {
+    name: "Bisnis",
     title: "Bisnis",
-    href: "/Bisnis",
+    href: "/pages/bisnis",
     items: [
       {
         title: "Simpanan",
         description:
           "Jadikan bisnis Anda lebih berkembang, karena kami siap membantu dalam memberikan berbagai solusi untuk Anda",
         icons: <ChevronRight className="w-6 h-6" />,
-        href: "/Bisnis/Simpanan",
+        href: "/pages/bisnis/simpanan",
         animateIcon: true,
       },
       {
@@ -118,7 +120,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Nikmati berbagai kemudahan Kartu Kredit Mandiri yang hadir dengan memenuhi segala kebutuhan bisnis Anda",
-        href: "/Bisnis/Corporate-Card",
+        href: "/pages/bisnis/corporate-card",
         animateIcon: false,
       },
       {
@@ -126,7 +128,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Nikmati berbagai fasilitas serta kemudahan transaksi perbankan dari kami yang dapat mendukung bisnis Anda",
-        href: "/Bisnis/Trade-Finance",
+        href: "/pages/bisnis/trade-finance",
         animateIcon: true,
       },
       {
@@ -134,7 +136,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Nikmati sebuah layanan 24 jam yang hadir dan siap untuk selalu membantu bisnis Anda dalam memberikan segala",
-        href: "/Bisnis/E-Banking",
+        href: "/pages/bisnis/e-banking",
         animateIcon: true,
       },
       {
@@ -142,7 +144,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Kami siap membantu mengembangkan bisnis Anda dalam memberikan fasilitas pinjaman yang bisa disesuaikan dengan",
-        href: "/Bisnis/Pinjaman",
+        href: "/pages/bisnis/pinjaman",
         animateIcon: true,
       },
       {
@@ -150,7 +152,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Kelola dana Anda dengan berbagai fasilitas yang memudahkan Anda",
-        href: "/Bisnis/Cash-Management-Transaction",
+        href: "/pages/bisnis/cash-management-transaction",
         animateIcon: true,
       },
       {
@@ -158,7 +160,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Nikmati kemudahan bertransaksi treasury dengan harga yang bersaing sesuai dengan kebutuhan dan bisnis Anda",
-        href: "/Bisnis/Treasury-International-Banking",
+        href: "/pages/bisnis/treasury-international-banking",
         animateIcon: true,
       },
       {
@@ -166,14 +168,14 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Integrasikan bisnis Anda dengan layanan perbankan terbaik dari Bank Mandiri.",
-        href: "/Bisnis/Mandiri-API",
+        href: "/pages/bisnis/mandiri-api",
         animateIcon: true,
       },
     ],
     quickActions: [
       {
         title: "Tarif Layanan",
-        href: "/Perseorangan/Tarif-Layanan",
+        href: "/pages/perseorangan/tarif-layanan",
         icons: (
           <Banknote className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
@@ -183,20 +185,21 @@ export const navLinks = [
         icons: (
           <QrCode className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
-        href: "/Perseorangan/Tabungan-Now",
+        href: "/pages/perseorangan/tabungan-now",
       },
     ],
   },
   {
+    name: "Wealth Management",
     title: "Prioritas",
-    href: "/Prioritas",
+    href: "/pages/wealth-management",
     items: [
       {
         title: "Prioritas",
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Nikmati berbagai layanan prioritas perbankan dimanapun Anda berada.",
-        href: "/Wealth-Management/Prioritas",
+        href: "/pages/wealth-management/prioritas",
         animateIcon: true,
       },
       {
@@ -204,7 +207,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Temukan berbagai layanan unggulan yang sesuai dengan kebutuhan finansial Anda.",
-        href: "/Wealth-Management/Produk",
+        href: "/pages/wealth-management",
         animateIcon: false,
       },
       {
@@ -212,7 +215,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Mandiri private akan senantiasa menjaga aset Anda, memastikannya bertumbuh dan meneruskannya ke generasi",
-        href: "/Wealth-Management/Private",
+        href: "/pages/wealth-management/private",
         animateIcon: true,
       },
       {
@@ -220,7 +223,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Informasi seputar peluang investasi, special event, penjelasan produk, dan berbagai informasi menarik lainnya yang terbit secara berkala.",
-        href: "/Wealth-Management/e-Magz",
+        href: "/pages/wealth-management/e-magz",
         animateIcon: false,
       },
     ],
@@ -234,14 +237,15 @@ export const navLinks = [
   },
   {
     title: "Tentang Mandiri",
-    href: "/Tentang-Mandiri",
+    name: "Tentang Mandiri",
+    href: "/pages/tentang-mandiri",
     items: [
       {
         title: "Korporasi Info",
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Melalui perjalanan panjang sejarah yang telah diukir, senantiasa selalu berkomitmen untuk memberikan kontribusi terbaik",
-        href: "/Tentang-Mandiri/Korporasi-Info",
+        href: "/pages/tentang-mandiri/korporasi-info",
         animateIcon: true,
       },
       {
@@ -249,7 +253,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Implementing sustainability principles that support business, operation and communities by ESG aspects alignment",
-        href: "/Tentang-Mandiri/Sustainability",
+        href: "/pages/tentang-mandiri/sustainability",
         animateIcon: true,
       },
       {
@@ -257,7 +261,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Implementasi Good Corporate Governance (GCG) merupakan elemen fundamental untuk meningkatkan nilai perusahaan (value creation)",
-        href: "/Tentang-Mandiri/Good-Corporate-Governance",
+        href: "/pages/tentang-mandiri/good-corporate-governance",
         animateIcon: false,
       },
       {
@@ -265,7 +269,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Mendorong budaya cross-sell serta mengoptimalkan pengintegrasian bisnis disemua segmen termasuk dengan Perusahaan Anak",
-        href: "/Tentang-Mandiri/Mandiri-Group",
+        href: "/pages/tentang-mandiri/mandiri-group",
         animateIcon: true,
       },
       {
@@ -273,7 +277,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Membangun masyarakat Indonesia Mandiri melalui program TJSL guna menjadi lembaga keuangan Indonesia yang progresif",
-        href: "/Tentang-Mandiri/TJSL-Mandiri",
+        href: "/pages/tentang-mandiri/tjsl-mandiri",
         animateIcon: true,
       },
       {
@@ -281,7 +285,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Informasi keuangan, berita dan saham Bank Mandiri Bagi Pemegang Saham dan Investor secara efektif, efisien dan transparan",
-        href: "/Tentang-Mandiri/Investor-Relations",
+        href: "/pages/tentang-mandiri/investor-relations",
         animateIcon: true,
       },
       {
@@ -289,7 +293,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Miliki pengalaman kerja di dunia perbankan dengan kompetensi kelas dunia, lingkungan kerja yang ramah dan menghargai setiap ide positif",
-        href: "/Tentang-Mandiri/Karir",
+        href: "/pages/tentang-mandiri/karir",
         animateIcon: true,
       },
       {
@@ -297,14 +301,14 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Keterbukaan Informasi Bank Mandiri dalam perannya sebagai Pejabat Pengelola Informasi dan Dokumentasi",
-        href: "/Tentang-Mandiri/PPID",
+        href: "/pages/tentang-mandiri/ppid",
         animateIcon: true,
       },
     ],
     quickActions: [
       {
         title: "Tarif Layanan",
-        href: "/Perseorangan/Tarif-Layanan",
+        href: "/pages/perseorangan/tarif-layanan",
         icons: (
           <Banknote className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
@@ -313,6 +317,7 @@ export const navLinks = [
   },
   {
     title: "Bantuan",
-    href: "/Bantuan",
+    name: "Bantuan",
+    href: "/pages/bantuan",
   },
 ];

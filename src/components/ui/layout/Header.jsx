@@ -181,7 +181,6 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Submenu Dropdown */}
       {navLinks.map(
         (link, index) =>
           link.items && (
@@ -200,7 +199,7 @@ const Header = () => {
                       href={link.href}
                       className="text-[22px] flex items-center gap-1 text-primary group"
                     >
-                      {link.title}
+                      {link.name}
                       <ChevronRight className="w-6 h-6 transition-transform duration-300 transform group-hover:translate-x-1" />
                     </Link>
                   </div>
