@@ -28,7 +28,7 @@ export const navLinks = [
         icons: <ExternalLink className="w-6 h-6" />,
         description:
           "Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda",
-        href: "/pages/perseorangan/pinjaman",
+        href: "https://www.mandirikartukredit.com",
         animateIcon: false,
       },
 
@@ -88,7 +88,7 @@ export const navLinks = [
     quickActions: [
       {
         title: "Tarif Layanan",
-        href: "/pages/perseorangan/tarif-layanan",
+        href: "/pages/tarif-layanan",
         icons: (
           <Banknote className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
@@ -98,10 +98,11 @@ export const navLinks = [
         icons: (
           <QrCode className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
-        href: "/pages/perseorangan/tabungan-now",
+        href: "https://join.bankmandiri.co.id/app/",
       },
     ],
   },
+
   {
     name: "Bisnis",
     title: "Bisnis",
@@ -175,7 +176,7 @@ export const navLinks = [
     quickActions: [
       {
         title: "Tarif Layanan",
-        href: "/pages/perseorangan/tarif-layanan",
+        href: "/pages/tarif-layanan",
         icons: (
           <Banknote className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
@@ -185,10 +186,11 @@ export const navLinks = [
         icons: (
           <QrCode className="w-12 h-12 p-2 rounded-full bg-primary text-white" />
         ),
-        href: "/pages/perseorangan/tabungan-now",
+        href: "https://join.bankmandiri.co.id/app/",
       },
     ],
   },
+
   {
     name: "Wealth Management",
     title: "Prioritas",
@@ -235,6 +237,7 @@ export const navLinks = [
       },
     ],
   },
+
   {
     title: "Tentang Mandiri",
     name: "Tentang Mandiri",
@@ -315,6 +318,7 @@ export const navLinks = [
       },
     ],
   },
+
   {
     title: "Bantuan",
     name: "Bantuan",

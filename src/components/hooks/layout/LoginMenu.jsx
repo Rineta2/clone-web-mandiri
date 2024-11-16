@@ -16,7 +16,7 @@ export default function LoginMenu({ isOpen, onClick }) {
       </div>
 
       {isOpen && (
-        <div className="absolute top-10 left-[-30px] bg-background border-b border-secondary shadow-lg rounded-lg py-4 px-6 w-[250px] z-10 overflow-hidden origin-bottom animate-scale-up">
+        <div className="absolute top-10 right-[-18%] bg-background border-b border-secondary shadow-lg rounded-lg py-4 px-6 w-[250px] z-10 overflow-hidden origin-bottom animate-scale-up">
           <div className="flex flex-col gap-3">
             <button className="text-left text-foreground hover:text-primary transition-colors py-2">
               Livin
