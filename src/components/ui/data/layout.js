@@ -116,30 +116,7 @@ export const navLinks = [
         href: "/pages/bisnis/simpanan",
         animateIcon: true,
       },
-      {
-        title: "Corporate Card",
-        icons: <ExternalLink className="w-6 h-6" />,
-        description:
-          "Nikmati berbagai kemudahan Kartu Kredit Mandiri yang hadir dengan memenuhi segala kebutuhan bisnis Anda",
-        href: "/pages/bisnis/corporate-card",
-        animateIcon: false,
-      },
-      {
-        title: "Trade Finance",
-        icons: <ChevronRight className="w-6 h-6" />,
-        description:
-          "Nikmati berbagai fasilitas serta kemudahan transaksi perbankan dari kami yang dapat mendukung bisnis Anda",
-        href: "/pages/bisnis/trade-finance",
-        animateIcon: true,
-      },
-      {
-        title: "E-Banking ",
-        icons: <ChevronRight className="w-6 h-6" />,
-        description:
-          "Nikmati sebuah layanan 24 jam yang hadir dan siap untuk selalu membantu bisnis Anda dalam memberikan segala",
-        href: "/pages/bisnis/e-banking",
-        animateIcon: true,
-      },
+
       {
         title: "Pinjaman",
         icons: <ChevronRight className="w-6 h-6" />,
@@ -148,6 +125,16 @@ export const navLinks = [
         href: "/pages/bisnis/pinjaman",
         animateIcon: true,
       },
+
+      {
+        title: "Corporate Card",
+        icons: <ExternalLink className="w-6 h-6" />,
+        description:
+          "Nikmati berbagai kemudahan Kartu Kredit Mandiri yang hadir dengan memenuhi segala kebutuhan bisnis Anda",
+        href: "https://www.mandirikartukredit.com/produk/corporate",
+        animateIcon: false,
+      },
+
       {
         title: "Cash Management & Transaction",
         icons: <ChevronRight className="w-6 h-6" />,
@@ -156,14 +143,34 @@ export const navLinks = [
         href: "/pages/bisnis/cash-management-transaction",
         animateIcon: true,
       },
+
+      {
+        title: "Trade Finance",
+        icons: <ChevronRight className="w-6 h-6" />,
+        description:
+          "Nikmati berbagai fasilitas serta kemudahan transaksi perbankan dari kami yang dapat mendukung bisnis Anda",
+        href: "/pages/bisnis/trade-finance",
+        animateIcon: true,
+      },
+
       {
         title: "Treasury & International Banking",
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Nikmati kemudahan bertransaksi treasury dengan harga yang bersaing sesuai dengan kebutuhan dan bisnis Anda",
-        href: "/pages/bisnis/treasury-international-banking",
+        href: "/pages/bisnis/treasury",
         animateIcon: true,
       },
+
+      {
+        title: "E-Banking ",
+        icons: <ChevronRight className="w-6 h-6" />,
+        description:
+          "Nikmati sebuah layanan 24 jam yang hadir dan siap untuk selalu membantu bisnis Anda dalam memberikan segala",
+        href: "/pages/bisnis/e-banking",
+        animateIcon: true,
+      },
+
       {
         title: "Mandiri API",
         icons: <ChevronRight className="w-6 h-6" />,

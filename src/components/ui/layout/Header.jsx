@@ -99,6 +99,25 @@ const Header = () => {
     };
   }, []);
 
+  // Handler untuk menutup mobile menu
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null); // Opsional: Tutup dropdown yang terbuka
+  };
+
+  // Handler untuk menutup dropdown pada desktop menu
+  const handleDesktopLinkClick = (index) => {
+    console.log(`Desktop link clicked for dropdown index: ${index}`);
+    setActiveDropdown(null);
+    gsap.to(dropdownRefs.current[index], {
+      opacity: 0,
+      y: -20,
+      duration: 0.3,
+      ease: "power2.in",
+      pointerEvents: "none",
+    });
+  };
+
   return (
     <header
       ref={headerRef}
@@ -148,6 +167,8 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-text hover:text-primary text-[18px] focus:outline-none"
+            aria-label="Toggle Menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <svg
@@ -182,6 +203,7 @@ const Header = () => {
         </div>
       </nav>
 
+      {/* Dropdown Menus */}
       {navLinks.map(
         (link, index) =>
           link.items && (
@@ -199,6 +221,7 @@ const Header = () => {
                     <Link
                       href={link.href}
                       className="text-[22px] flex items-center gap-1 text-primary group"
+                      onClick={() => handleDesktopLinkClick(index)}
                     >
                       {link.name}
                       <ChevronRight className="w-6 h-6 transition-transform duration-300 transform group-hover:translate-x-1" />
@@ -210,6 +233,7 @@ const Header = () => {
                         <Link
                           href={subItem.href}
                           className="flex items-center gap-2 text-[20px] font-semibold group hover:text-primary"
+                          onClick={() => handleDesktopLinkClick(index)}
                         >
                           {subItem.title}
                           <div
@@ -242,6 +266,7 @@ const Header = () => {
                           key={actionIndex}
                           href={action.href}
                           className="flex items-center gap-2 text-text text-[20px] hover:underline"
+                          onClick={() => handleDesktopLinkClick(index)}
                         >
                           {action.icons}
                           {action.title}
@@ -255,6 +280,7 @@ const Header = () => {
           )
       )}
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <ul className="md:hidden bg-white border-t">
           {navLinks.map((link, index) => (
@@ -262,6 +288,7 @@ const Header = () => {
               <Link
                 href={link.href}
                 className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex justify-between items-center group"
+                onClick={handleLinkClick}
               >
                 {link.title}
                 {link.items && (
@@ -275,6 +302,7 @@ const Header = () => {
                       <Link
                         href={subItem.href}
                         className="px-4 py-2 text-gray-600 hover:bg-gray-100 text-sm group flex items-center justify-between"
+                        onClick={handleLinkClick}
                       >
                         {subItem.title}
                         <ChevronRight className="w-4 h-4 transition-transform duration-300 transform group-hover:translate-x-1" />
@@ -290,6 +318,7 @@ const Header = () => {
                             key={actionIndex}
                             href={action.href}
                             className="flex items-center gap-2 text-blue-500 hover:underline text-sm"
+                            onClick={handleLinkClick}
                           >
                             {action.icons}
                             {action.title}
