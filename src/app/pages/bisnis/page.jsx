@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { box, investasi } from "@/components/ui/data/bisnis/data";
+import { box, investasi } from "@/components/ui/data/bisnis/index";
 
 import bg2 from "@/components/assest/bisnis/bg2.jpg";
 
@@ -16,7 +16,11 @@ export default function Bisnis() {
       <section className="relative min-h-[60vh]">
         <div className="container px-12 mx-auto">
           <div className="absolute top-4 left-[20.8%] flex items-center gap-2">
-            <Link href="/" className="text-background text-[18px]">
+            <Link
+              prefetch={true}
+              href="/"
+              className="text-background text-[18px]"
+            >
               Home
             </Link>
             <div className="text-background text-[20px]"> / </div>

@@ -25,11 +25,28 @@ export const navLinks = [
 
       {
         title: "Pinjaman",
-        icons: <ExternalLink className="w-6 h-6" />,
+        icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda",
+        href: "/pages/perseorangan/pinjaman",
+        animateIcon: true,
+      },
+
+      {
+        title: "Kartu Kredit",
+        icons: <ExternalLink className="w-6 h-6" />,
+        description:
+          "Nikmati berbagai keunggulan dan kemudahan melalui mandiri kartu kredit sesuai kebutuhan Anda",
         href: "https://www.mandirikartukredit.com",
         animateIcon: false,
+      },
+
+      {
+        title: "Kartu Debit",
+        icons: <ChevronRight className="w-6 h-6" />,
+        description: "Miliki Kartu Mandiri Debit dan dapatkan kemudahan, kenyamanan serta keamanan dalam bertransaksi di dalam",
+        href: "/pages/perseorangan/kartu-debit",
+        animateIcon: true,
       },
 
       {
@@ -42,36 +59,19 @@ export const navLinks = [
       },
 
       {
-        title: "Pengiriman Uang",
-        icons: <ExternalLink className="w-6 h-6" />,
-        description: "Layanan pengiriman dan penerimaan uang secara mudah dan",
-        href: "/pages/perseorangan/pengiriman-uang",
-        animateIcon: false,
-      },
-
-      {
-        title: "Pinjaman",
-        icons: <ChevronRight className="w-6 h-6" />,
-        description:
-          "Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda",
-        href: "/pages/perseorangan/pinjaman",
-        animateIcon: true,
-      },
-
-      {
-        title: "Kartu Debit",
-        icons: <ChevronRight className="w-6 h-6" />,
-        description:
-          "Miliki Kartu Mandiri Debit dan dapatkan kemudahan, kenyamanan serta keamanan dalam bertransaksi di dalam",
-        href: "/pages/perseorangan/kartu-debit",
-        animateIcon: true,
-      },
-
-      {
         title: "E-Banking",
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Mandiri e-banking memungkinkan Anda bertransaksi dengan mudah kapan saja dan dimana saja",
+        href: "/pages/perseorangan/e-banking",
+        animateIcon: true,
+      },
+
+      {
+        title: "Pengiriman Uang",
+        icons: <ChevronRight className="w-6 h-6" />,
+        description:
+          "Layanan pengiriman dan penerimaan uang secara mudah dan aman di seluruh dunia",
         href: "/pages/perseorangan/e-banking",
         animateIcon: true,
       },
