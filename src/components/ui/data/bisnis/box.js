@@ -51,6 +51,11 @@ import bgTreasure from "@/components/assest/layout/slug/bisnis/Treasury & Intern
 import TransaksiC from "@/components/assest/layout/slug/bisnis/Treasury & Internasional Bangking/Transaksi_Cas.jpg"
 import articleT from "@/components/assest/layout/slug/bisnis/Treasury & Internasional Bangking/article-0-compressor.jpg"
 
+//============= E - Banking =============//
+import bgEbanking from "@/components/assest/layout/slug/bisnis/E banking/bisnis_ebanking_bannerutama1.jpg"
+import Emandiri from "@/components/assest/layout/slug/bisnis/E banking/mandiri.jpg"
+import Eonline from "@/components/assest/layout/slug/bisnis/E banking/mandiri_online.JPG"
+
 export const box = [
   {
     name: "Simpanan",
@@ -389,6 +394,41 @@ export const box = [
     desc: "Nikmati layanan e-banking untuk transaksi finansial dan non finansial bisnis Anda dengan aplikasi internet banking yang memudahkan",
     img: eBanking,
     slug: "e-banking",
+    slugDetails: [
+      {
+        id: 1,
+        name: "Layanan E-Channel / E-Banking",
+        desc: "Nikmati layanan e-banking untuk transaksi finansial dan non finansial bisnis Anda dengan aplikasi internet banking yang memudahkan",
+        bg: bgEbanking,
+        box: [
+          {
+            id: 1,
+            title: "Mandiri EDC",
+            desc: "Saatnya nikmati kemudahan penerimaan pembayaran dengan menghubungkan antar rekening bank dan memindahkan dana secara realtime dengan",
+            icons: <ChevronRight />,
+            img: Emandiri,
+            details: "/pages/perseorangan/simpanan/tabungan-rupiah"
+          },
+
+          {
+            id: 2,
+            title: "Mandiri Internet Bisnis",
+            desc: "Nikmati Layanan e-Banking untuk Transaksi Finansial dan Non Finansial dengan Aplikasi Internet Banking yang Memudahkan Anda dan Bisnis Anda",
+            icons: <ChevronRight />,
+            img: Eonline,
+            details: "/pages/perseorangan/simpanan/tabungan-now"
+          }
+        ],
+        tBoxTitle: null,
+        tBox: [],
+        tTabsTitle: null,
+        tTabs: [],
+        jangka: null,
+        descJ: null,
+        jBox: [],
+        pages: []
+      }
+    ]
   },
 
   {
