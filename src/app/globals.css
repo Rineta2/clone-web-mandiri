@@ -34,11 +34,11 @@ body {
 
 .container {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 html {
   font-size: 85%;
-  border: 1px solid red;
 }
 
 @keyframes slide-up {

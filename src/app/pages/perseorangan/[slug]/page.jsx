@@ -6,8 +6,10 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-export default function PerseorangDetail({ params }) {
-  const data = box.find((item) => item.slug === params.slug);
+export default async function PerseorangDetail({ params }) {
+  const { slug } = await params;
+
+  const data = box.find((item) => item.slug === slug);
 
   if (!data) {
     return <div>Data tidak ditemukan</div>;
@@ -302,32 +304,35 @@ export default function PerseorangDetail({ params }) {
                 )
             )}
 
-            {/* Jangka Section */}
+            {/* Pages Section */}
             {data.slugDetails.map(
               (item) =>
                 item.pages.length > 0 && (
                   <div key={item.id} className="mt-[5%]">
-                    {item.pages.map((item) => {
+                    {item.pages.map((pageItem) => {
                       return (
-                        <div key={item.id} className="flex gap-10 items-center">
+                        <div
+                          key={pageItem.id}
+                          className="flex gap-10 items-center"
+                        >
                           <Image
-                            src={item.img}
-                            alt={item.title}
+                            src={pageItem.img}
+                            alt={pageItem.title}
                             quality={100}
                           />
 
                           <div className="flex flex-col gap-5">
                             <h1 className="text-primary text-3xl">
-                              {item.title}
+                              {pageItem.title}
                             </h1>
                             <p className="text-gray-500 text-[1.2rem]">
-                              {item.desc}
+                              {pageItem.desc}
                             </p>
                             <Link
-                              href={item.path}
+                              href={pageItem.path}
                               className="flex items-center gap-1 text-primary text-[18px]"
                             >
-                              {item.name} {item.icons}
+                              {pageItem.name} {pageItem.icons}
                             </Link>
                           </div>
                         </div>

@@ -5,8 +5,11 @@ import { box } from "@/components/ui/data/perseorangan/index";
 import Image from "next/image";
 
 import Link from "next/link";
+import { icons } from "lucide-react";
 
 export default function BoxContent() {
+  const isExternalLink = (url) => /^https?:\/\//.test(url);
+
   return (
     <section>
       <div className="max-w-[1200px] py-12 px-12 mx-auto">
@@ -25,14 +28,25 @@ export default function BoxContent() {
               }}
             >
               <div className="flex flex-col gap-4 mb-4">
-                <Link
-                  href={item.slug}
-                  className="flex items-center gap-2 text-[20px] text-primary"
-                >
-                  {item.name}
-                  {item.icons}
-                </Link>
-
+                {isExternalLink(item.slug) ? (
+                  <a
+                    href={item.slug}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[20px] text-primary"
+                  >
+                    {item.name}
+                    {item.icons}
+                  </a>
+                ) : (
+                  <Link
+                    href={`/pages/perseorangan/${item.slug}`}
+                    className="flex items-center gap-2 text-[20px] text-primary"
+                  >
+                    {item.name}
+                    {item.icons}
+                  </Link>
+                )}
                 <p className="text-[16px] text-gray-400">{item.desc}</p>
               </div>
 

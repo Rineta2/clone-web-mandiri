@@ -398,7 +398,7 @@ export const box = [
     icons: <ExternalLink />,
     desc: "Nikmati berbagai keunggulan dan kemudahan melalui mandiri kartu kredit sesuai kebutuhan Anda",
     img: kk,
-    slug: "kartu-kredit",
+    slug: "https://www.mandirikartukredit.com",
   },
 
   {
