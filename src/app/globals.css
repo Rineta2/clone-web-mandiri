@@ -38,6 +38,7 @@ body {
 
 html {
   font-size: 85%;
+  border: 1px solid red;
 }
 
 @keyframes slide-up {

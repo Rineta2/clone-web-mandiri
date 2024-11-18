@@ -6,8 +6,10 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-export default function WealthManagementDetails({ params }) {
-  const data = content.find((item) => item.slug === params.slug);
+export default async function WealthManagementDetails({ params }) {
+  const { slug } = await params;
+
+  const data = content.find((item) => item.slug === slug);
 
   if (!data) {
     return <div>Data tidak ditemukan</div>;
@@ -27,7 +29,7 @@ export default function WealthManagementDetails({ params }) {
                     "linear-gradient(122deg, rgba(241,231,212,1) 0%, rgba(241,227,194,1) 99%)",
                 }}
               >
-                <div className="text-text z-10 absolute top-6 left-[20%] flex items-center gap-2">
+                <div className="text-text z-10 absolute top-6 left-[20%] flex items-center gap-2 max-md:left-[10%]">
                   <Link
                     href={"/"}
                     className="hover:underline transition-all duration-300 font-semibold text-[1.2rem]"
@@ -54,7 +56,7 @@ export default function WealthManagementDetails({ params }) {
                   </Link>
                 </div>
 
-                <div className="absolute flex flex-col gap-4 top-[45%] left-[20%] translate-[-50%,-50%] w-screen h-full z-10">
+                <div className="absolute flex flex-col gap-4 top-[45%] left-[20%] translate-[-50%,-50%] w-screen h-full z-10 max-md:left-[10%]">
                   <h1 className="text-[#91690c] text-[3rem] font-semibold">
                     {item.name}
                   </h1>
@@ -74,16 +76,16 @@ export default function WealthManagementDetails({ params }) {
 
       <section>
         <div className="max-w-[60%] mx-auto">
-          <div className="flex gap-4  items-center">
+          <div className="flex gap-4  items-center max-md:flex-wrap">
             {data.slugDetails.map((item) => (
               <div
                 key={item.id}
-                className="flex gap-4 items-center justify-center overflow-hidden"
+                className="flex gap-4 items-center justify-center overflow-hidden max-md:flex-wrap"
               >
                 {item.card.map((card) => (
                   <div
                     key={card.id}
-                    className="flex flex-col items-center justify-center gap-6 p-6 bg-background border border-gray-200 box-shadow-lg rounded-lg hover:translate-y-[-10px] transition-all duration-700"
+                    className="flex flex-col items-center justify-center gap-6 p-6 bg-background border border-gray-200 box-shadow-lg rounded-lg hover:translate-y-[-10px] transition-all duration-700 max-md:w-[350px] max-md:h-[350px]"
                   >
                     <Image
                       src={card.img}
@@ -107,15 +109,15 @@ export default function WealthManagementDetails({ params }) {
               item.tBox.length > 0 && (
                 <div key={item.id} className="flex flex-col gap-10">
                   <div className="mx-auto">
-                    <h1 className="text-[2rem] max-w-[30%] mx-auto text-center font-semibold text-[#91690c] mt-[8%] mb-[5%]">
+                    <h1 className="text-[2rem] max-w-[30%] mx-auto text-center font-semibold text-[#91690c] mt-[8%] mb-[5%] md:max-w-[50%]">
                       {item.tBoxTitle}
                     </h1>
 
-                    <div className="flex gap-10">
+                    <div className="flex gap-10 max-md:flex-wrap max-md:justify-center">
                       {item.tBox.map((jBoxItem) => (
                         <div
                           key={jBoxItem.id}
-                          className="relative flex flex-col items-center justify-center p-6 text-center gap-10 w-[100%] border border-gray-200 rounded-lg"
+                          className="relative flex flex-col items-center justify-center p-6 text-center gap-10 w-[100%] border border-gray-200 rounded-lg max-md:w-[350px] max-md:h-[350px]"
                         >
                           <Image
                             src={jBoxItem.img}
@@ -145,7 +147,7 @@ export default function WealthManagementDetails({ params }) {
                       {item.titleTabs}
                     </h1>
 
-                    <div className="flex gap-10">
+                    <div className="flex gap-10 max-md:flex-wrap max-md:justify-center">
                       {item.tTabs.map((jBoxItem) => (
                         <div
                           key={jBoxItem.id}
