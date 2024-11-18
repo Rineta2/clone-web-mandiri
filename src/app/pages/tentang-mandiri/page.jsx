@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { box } from "@/components/ui/data/tentang-kami/data";
+import { box } from "@/components/ui/data/tentang-kami/index";
 
 export default function TentangMandiri() {
   return (
