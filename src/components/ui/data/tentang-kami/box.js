@@ -28,31 +28,50 @@ export const box = [
     slugDetails: [
       {
         id: 1,
-        titleH: "Info Korporasi",
-        descH: "Melalui perjalanan panjang sejarah yang telah diukir, senantiasa selalu berkomitmen untuk memberikan kontribusi terbaik",
-        bgHome: Info_Korporasi_Home,
-        titleA: "Transformasi Bank Mandiri",
-        descA: "Bank Mandiri didirikan pada 2 Oktober 1998, sebagai bagian dari program restrukturisasi perbankan yang dilaksanakan oleh pemerintah Indonesia. Pada bulan Juli 1999, empat bank pemerintah -- yaitu Bank Bumi Daya, Bank Dagang Negara, Bank Ekspor Impor Indonesia dan Bank Pembangunan Indonesia -- dilebur menjadi Bank Mandiri, dimana masing-masing bank tersebut memiliki peran yang tak terpisahkan dalam pembangunan perekonomian Indonesia. Sampai dengan hari ini, Bank Mandiri meneruskan tradisi selama lebih dari 140 tahun memberikan kontribusi dalam dunia perbankan dan perekonomian Indonesia.",
-        name: "Selengkapnya",
-        link: "/pages/tentang-mandiri/korporasi-info",
-        icons: <ChevronRight />,
-        bgvm: Visi_Misi,
-        vm: [
+        home: [
+          {
+            id: 1,
+            title: "Info Korporasi",
+            desc: "Melalui perjalanan panjang sejarah yang telah diukir, senantiasa selalu berkomitmen untuk memberikan kontribusi terbaik",
+            bgHome: Info_Korporasi_Home,
+            name: "Selengkapnya",
+            link: "/pages/tentang-mandiri/korporasi-info",
+            icons: <ChevronRight />,
+          }
+        ],
+        about: [
+          {
+            id: 1,
+            title: "Transformasi Bank Mandiri",
+            desc: "Bank Mandiri didirikan pada 2 Oktober 1998, sebagai bagian dari program restrukturisasi perbankan yang dilaksanakan oleh pemerintah Indonesia. Pada bulan Juli 1999, empat bank pemerintah -- yaitu Bank Bumi Daya, Bank Dagang Negara, Bank Ekspor Impor Indonesia dan Bank Pembangunan Indonesia -- dilebur menjadi Bank Mandiri, dimana masing-masing bank tersebut memiliki peran yang tak terpisahkan dalam pembangunan perekonomian Indonesia. Sampai dengan hari ini, Bank Mandiri meneruskan tradisi selama lebih dari 140 tahun memberikan kontribusi dalam dunia perbankan dan perekonomian Indonesia.",
+            name: "Selengkapnya",
+            link: "/pages/tentang-mandiri/korporasi-info",
+            icons: <ChevronRight />,
+          }
+        ],
+        img: Visi_Misi,
+        visi: [
           {
             id: 1,
             title: "Visi",
-            desc: "Menjadi partner finansial pilihan utama Anda"
+            desc: "Menjadi partner finansial pilihan utama Anda",
           },
+
           {
             id: 2,
             title: "Misi",
-            desc: "Menyediakan solusi perbankan digital yang handal dan simple yang menjadi bagian hidup nasabah"
+            desc: "Menyediakan solusi perbankan digital yang handal dan simple yang menjadi bagian hidup nasabah",
+          }
+        ],
+        quete: [
+          {
+            id: 1,
+            author: "Bank Mandiri",
+            bgAuthor: Bank_Mandiri,
+            quetes: "Mengusung semangat Terdepan, Terpercaya, Tumbuh bersama Anda, Bank Mandiri Group telah mengikrarkan diri untuk menjadi entitas keuangan yang inovatif, responsif, dan solutif agar mampu mengantisipasi tantangan perkembangan ekonomi serta memenuhi seluruh kebutuhan nasabah.",
           }
         ],
         linkvm: "/",
-        quetes: "Mengusung semangat Terdepan, Terpercaya, Tumbuh bersama Anda, Bank Mandiri Group telah mengikrarkan diri untuk menjadi entitas keuangan yang inovatif, responsif, dan solutif agar mampu mengantisipasi tantangan perkembangan ekonomi serta memenuhi seluruh kebutuhan nasabah.",
-        author: "Bank Mandiri",
-        bgAuthor: Bank_Mandiri,
         manager: [
           {
             id: 1,
@@ -62,7 +81,6 @@ export const box = [
             path: "/pages/tentang-mandiri/korporasi-info/manajemen"
           }
         ],
-
         organisasi: [
           {
             id: 1,
