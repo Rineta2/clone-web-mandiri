@@ -10,7 +10,7 @@ import {
   penawaran,
   menarik,
   yt,
-} from "@/components/ui/data/wealth-management/data";
+} from "@/components/ui/data/wealth-management/index";
 
 import Image from "next/image";
 
