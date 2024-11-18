@@ -20,7 +20,7 @@ export default async function TentangDetails({ params }) {
       {data.slugDetails &&
         Array.isArray(data.slugDetails) &&
         data.slugDetails.length > 0 && (
-          <section className="relative overflow-hidden min-h-[100vh]">
+          <section className="relative overflow-hidden min-h-[50vh]">
             <div className="container mx-auto">
               {data.slugDetails.map((item) => (
                 <div
