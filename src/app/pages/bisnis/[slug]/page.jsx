@@ -6,8 +6,10 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-export default function BisnisDetail({ params }) {
-  const data = box.find((item) => item.slug === params.slug);
+export default async function BisnisDetail({ params }) {
+  const { slug } = await params;
+
+  const data = box.find((item) => item.slug === slug);
 
   if (!data) {
     return <div>Data tidak ditemukan</div>;
