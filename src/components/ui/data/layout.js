@@ -263,7 +263,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Implementing sustainability principles that support business, operation and communities by ESG aspects alignment",
-        href: "/pages/tentang-mandiri/sustainability",
+        href: "https://www.bankmandiri.co.id/esg",
         animateIcon: true,
       },
       {
@@ -295,7 +295,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Informasi keuangan, berita dan saham Bank Mandiri Bagi Pemegang Saham dan Investor secara efektif, efisien dan transparan",
-        href: "/pages/tentang-mandiri/investor-relations",
+        href: "https://www.bankmandiri.co.id/web/ir",
         animateIcon: true,
       },
       {
@@ -303,7 +303,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Miliki pengalaman kerja di dunia perbankan dengan kompetensi kelas dunia, lingkungan kerja yang ramah dan menghargai setiap ide positif",
-        href: "/pages/tentang-mandiri/karir",
+        href: "https://www.bankmandiri.co.id/web/guest/mandiri-career",
         animateIcon: true,
       },
       {
@@ -311,7 +311,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Keterbukaan Informasi Bank Mandiri dalam perannya sebagai Pejabat Pengelola Informasi dan Dokumentasi",
-        href: "/pages/tentang-mandiri/ppid",
+        href: "https://www.bankmandiri.co.id/web/guest/ppid",
         animateIcon: true,
       },
     ],

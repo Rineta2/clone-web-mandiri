@@ -11,6 +11,8 @@ import { box, investasi } from "@/components/ui/data/bisnis/index";
 import bg2 from "@/components/assest/bisnis/bg2.jpg";
 
 export default function Bisnis() {
+  const isExternalLink = (url) => /^https?:\/\//.test(url);
+
   return (
     <Fragment>
       <section className="relative min-h-[60vh]">
@@ -67,13 +69,25 @@ export default function Bisnis() {
                 }}
               >
                 <div className="flex flex-col gap-4 mb-4">
-                  <Link
-                    href={item.slug}
-                    className="flex items-center gap-2 text-[20px] text-primary"
-                  >
-                    {item.name}
-                    {item.icons}
-                  </Link>
+                  {isExternalLink(item.slug) ? (
+                    <a
+                      href={item.slug}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-[20px] text-primary"
+                    >
+                      {item.name}
+                      {item.icons}
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/pages/bisnis/${item.slug}`}
+                      className="flex items-center gap-2 text-[20px] text-primary"
+                    >
+                      {item.name}
+                      {item.icons}
+                    </Link>
+                  )}
 
                   <p className="text-[16px] text-gray-400">{item.desc}</p>
                 </div>

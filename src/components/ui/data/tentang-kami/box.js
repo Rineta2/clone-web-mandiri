@@ -128,7 +128,8 @@ export const box = [
         sahamBox: [],
         inform: [],
         informBox: [],
-        pages: []
+        pages: [],
+        box: []
       }
     ]
   },
@@ -138,7 +139,7 @@ export const box = [
     icons: <ChevronRight />,
     desc: "Implementing sustainability principles that support business, operation and communities by ESG aspects alignment",
     img: Sustainability,
-    slug: "sustainability",
+    slug: "https://www.bankmandiri.co.id/esg",
   },
 
   {
@@ -248,7 +249,8 @@ export const box = [
             icons: <ChevronRight />,
             path: "/"
           },
-        ]
+        ],
+        box: []
       }
     ]
   },
@@ -435,7 +437,7 @@ export const box = [
     icons: <ExternalLink />,
     desc: "Informasi keuangan, berita dan saham Bank Mandiri Bagi Pemegang Saham dan Investor secara efektif, efisien dan transparan",
     img: Investor_Relations,
-    slug: "investor-relations",
+    slug: "https://www.bankmandiri.co.id/web/ir",
 
   },
 
@@ -454,6 +456,7 @@ export const box = [
     img: Mandiri_University,
     slug: "mandiri-university",
   },
+
   {
     name: "Pengadaan",
     icons: <ChevronRight />,
@@ -461,6 +464,7 @@ export const box = [
     img: Pengadaan,
     slug: "pengadaan",
   },
+
   {
     name: "Kebijakan Privasi",
     icons: <ChevronRight />,
