@@ -6,8 +6,6 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import { ChevronRight } from "lucide-react";
-
 export default function TentangMandiriDetail({ params }) {
   const data = box.find((item) => item.slug === params.slug);
 
@@ -19,7 +17,7 @@ export default function TentangMandiriDetail({ params }) {
     <Fragment>
       {data.slugDetails && (
         <main>
-          <section className="relative overflow-hidden min-h-[50vh] bg-primary">
+          <section className="relative overflow-hidden min-h-[50vh]">
             <div className="container mx-auto">
               {data.slugDetails.map((item) => (
                 <div
@@ -43,7 +41,7 @@ export default function TentangMandiriDetail({ params }) {
                           <h1 className="text-background text-[3rem] font-semibold">
                             {homeItem.title}
                           </h1>
-                          <p className="text-background text-[1.2rem] max-w-[20%]">
+                          <p className="text-background text-[1.2rem] max-w-[30%]">
                             {homeItem.desc}
                           </p>
                         </div>
@@ -60,7 +58,7 @@ export default function TentangMandiriDetail({ params }) {
             </div>
           </section>
 
-          <section className="relative overflow-hidden min-h-[200vh]">
+          <section className="relative overflow-hidden min-h-[200vh] mt-[-3%]">
             <div className="container mx-auto">
               {data.slugDetails.map((item) => {
                 return (
@@ -88,34 +86,48 @@ export default function TentangMandiriDetail({ params }) {
 
               {data.slugDetails.map((item) => {
                 return (
-                  <div key={item.id} className="flex">
+                  <div key={item.id} className="flex flex-col">
                     <div className="w-[100%] h-full object-cover absolute top-[18%] left-0">
-                      <Image src={item.img} alt={"picture"} />
+                      {item.img &&
+                        item.img.map((item) => {
+                          return (
+                            <Image
+                              key={item.id}
+                              src={item.img}
+                              alt={item.title}
+                              quality={100}
+                            />
+                          );
+                        })}
 
-                      <div className="z-10 absolute w-[100%] h-[20%] bg-[#1a528a] top-[26%] left-[0] flex flex-col justify-center gap-10">
-                        {item.visi &&
-                          item.visi.map((visiItem) => (
+                      <div className="absolute top-[26%] left-0 w-[100%]">
+                        {item.visi.map((item) => {
+                          return (
                             <div
-                              key={visiItem.id}
-                              className="flex flex-col gap-6 px-[30%]"
+                              className="bg-primary flex flex-col justify-center pl-[30%] gap-6 h-[20vh]"
+                              key={item.id}
                             >
-                              <h1 className="text-[2rem] font-semibold text-secondary">
-                                {visiItem.title}
-                              </h1>
-
-                              <p className="text-[1.2rem] text-background">
-                                {visiItem.desc}
-                              </p>
+                              <div className="flex flex-col item-center justify-center">
+                                <h1 className="text-secondary text-[2rem]">
+                                  {item.title}
+                                </h1>
+                                <p className="text-background text-[1.2rem]">
+                                  {item.desc}
+                                </p>
+                              </div>
                             </div>
-                          ))}
+                          );
+                        })}
+                      </div>
 
+                      {item.linkvm && (
                         <Link
                           href={item.linkvm}
                           className="flex items-center gap-1 text-background text-[1.2rem] px-[30%]"
                         >
-                          Selengkapnya <ChevronRight />
+                          {item.name} {item.icons}
                         </Link>
-                      </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -171,7 +183,7 @@ export default function TentangMandiriDetail({ params }) {
                             href={managerItem.path}
                             className="flex items-center gap-1 text-[1.2rem] border-2 border-background px-4 py-2 rounded-md"
                           >
-                            Selengkapnya
+                            {managerItem.name} {managerItem.icons}
                           </Link>
                         </div>
                       ))}
@@ -190,13 +202,222 @@ export default function TentangMandiriDetail({ params }) {
                             href={organisasiItem.path}
                             className="flex items-center gap-1 text-[1.2rem] border-2 border-background px-4 py-2 rounded-md"
                           >
-                            Selengkapnya
+                            {organisasiItem.name} {organisasiItem.icons}
                           </Link>
                         </div>
                       ))}
                   </div>
                 );
               })}
+
+              {data.slugDetails.map((item) => {
+                return (
+                  <div key={item.id} className="flex flex-col">
+                    {item.saham &&
+                      item.saham.map((sahamItem) => (
+                        <div
+                          key={sahamItem.id}
+                          className="absolute top-0 left-0 w-[100%] h-[100%]"
+                        >
+                          <Image
+                            src={sahamItem.img}
+                            width={500}
+                            height={500}
+                            className="w-[100%] h-[300px] object-cover"
+                            alt={sahamItem.title}
+                          />
+                          <div className="absolute top-[5%] left-[20%]">
+                            <h1 className="text-[1.8rem] font-semibold text-primary">
+                              {sahamItem.title}
+                            </h1>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                );
+              })}
+
+              {data.slugDetails.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className="flex gap-10 w-[100%] h-[100%] absolute top-[10%] left-[10%] translate-[-50%,-50%] px-8 container mx-auto">
+                      {item.sahamBox &&
+                        item.sahamBox.map((sahamBoxItem) => (
+                          <div
+                            key={sahamBoxItem.id}
+                            className="flex py-8 px-8 bg-background border border-1 h-[200px]"
+                          >
+                            <div className="flex justify-center flex-col gap-4">
+                              <h1 className="text-[1.7rem] text-gray-600">
+                                {sahamBoxItem.title}
+                              </h1>
+                              <p className="text-[1.1rem]">
+                                {sahamBoxItem.desc}
+                              </p>
+                              <Link
+                                href={sahamBoxItem.link}
+                                className="text-primary text-[18px]"
+                              >
+                                {sahamBoxItem.name}
+                              </Link>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {data.slugDetails.map(
+                (item) =>
+                  item.inform &&
+                  item.informBox.length > 0 && (
+                    <div key={item.id}>
+                      {item.inform.map((item) => {
+                        return (
+                          <div
+                            key={item.id}
+                            className="absolute top-[25%] left-0"
+                          >
+                            <Image
+                              src={item.img}
+                              alt={item.title}
+                              width={500}
+                              height={500}
+                              className="w-screen h-[600px] z-[-1]"
+                              quality={100}
+                            />
+
+                            <h1 className="absolute top-[25%] left-[15%] text-background text-[2rem]">
+                              {item.title}
+                            </h1>
+                          </div>
+                        );
+                      })}
+
+                      <div className="absolute top-[40%] left-[10%] translate-[-50%,-50%] flex gap-10">
+                        {item.informBox.map((item) => {
+                          return (
+                            <div
+                              key={item.id}
+                              className="bg-background w-[100%] h-[550px] relative rounded-md transition-all duration-300 overflow-hidden"
+                            >
+                              <div className="py-10 px-10 flex flex-col gap-4 mb-10">
+                                <Link
+                                  href={item.path}
+                                  className="flex items-center gap-2 text-[1.4rem] text-primary"
+                                >
+                                  {item.title}
+                                  {item.icons}
+                                </Link>
+
+                                <p className="text-[1.2rem] text-gray-400">
+                                  {item.desc}
+                                </p>
+                              </div>
+
+                              <div className="w-[100%] h-[400px] absolute bottom-0">
+                                <Image
+                                  src={item.img}
+                                  width={500}
+                                  height={500}
+                                  className="w-[100%] h-[100%] object-cover"
+                                  alt={item.title}
+                                  quality={100}
+                                />
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )
+              )}
+
+              {data.slugDetails.map(
+                (item) =>
+                  item.pages.length > 0 && (
+                    <div key={item.id}>
+                      <div className="absolute container top-[70%] left-[10%] translate-[-50%,-50%] flex flex-col">
+                        {item.pages.map((item) => {
+                          return (
+                            <div
+                              key={item.id}
+                              className="bg-background w-[100%] h-[100%] relative rounded-md transition-all duration-300 overflow-hidden"
+                            >
+                              <div className="flex gap-4 mb-10">
+                                <Image
+                                  src={item.img}
+                                  width={500}
+                                  height={500}
+                                  className="w-[600px] h-[300px] object-cover"
+                                  alt={item.title}
+                                  quality={100}
+                                />
+
+                                <div className="flex flex-col gap-4 justify-center">
+                                  <h1 className="text-[2rem]">{item.title}</h1>
+
+                                  <p className="text-[1.2rem] text-gray-400">
+                                    {item.desc}
+                                  </p>
+
+                                  <Link
+                                    href={item.path}
+                                    className="flex items-center text-[1.3rem] text-primary"
+                                  >
+                                    {item.name} {item.icons}
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )
+              )}
+
+              {data.slugDetails.map(
+                (item) =>
+                  item.box.length > 0 && (
+                    <div
+                      key={item.id}
+                      className="grid grid-cols-2 max-w-[1000px] mx-auto gap-4"
+                      style={{
+                        rowGap: "2rem",
+                      }}
+                    >
+                      {item.box.map((item) => {
+                        return (
+                          <div
+                            key={item.id}
+                            className="flex flex-col gap-4 border border-1 p-4"
+                          >
+                            <Link
+                              href={item.path}
+                              className="flex items-center text-[1.8rem] text-primary z-10"
+                            >
+                              {item.title} {item.icons}
+                            </Link>
+
+                            <p className="text-[1.2rem] text-gray-400">
+                              {item.desc}
+                            </p>
+
+                            <Image
+                              src={item.img}
+                              alt={item.title}
+                              quality={100}
+                              width={500}
+                              height={500}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )
+              )}
             </div>
           </section>
         </main>

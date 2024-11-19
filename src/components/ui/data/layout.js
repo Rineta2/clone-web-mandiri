@@ -287,7 +287,7 @@ export const navLinks = [
         icons: <ChevronRight className="w-6 h-6" />,
         description:
           "Membangun masyarakat Indonesia Mandiri melalui program TJSL guna menjadi lembaga keuangan Indonesia yang progresif",
-        href: "/pages/tentang-mandiri/tjsl-mandiri",
+        href: "/pages/tentang-mandiri/tjsl-bank-mandiri",
         animateIcon: true,
       },
       {
