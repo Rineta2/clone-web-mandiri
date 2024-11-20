@@ -35,14 +35,19 @@ export default function ArticleDetails({ params }) {
                 {item.title}
               </h1>
 
-              <Image
-                src={item.img}
-                alt={item.title}
-                width={1000}
-                height={1000}
-                className="w-full h-auto"
-                quality={100}
-              />
+              {item.img.map((item) => {
+                return (
+                  <Image
+                    key={item.id}
+                    src={item.img}
+                    alt={item.title}
+                    width={1000}
+                    height={1000}
+                    className="w-full h-auto"
+                    quality={100}
+                  />
+                );
+              })}
 
               <h3 className="text-[24px] font-bold text-secondary">
                 {item.hightlight}

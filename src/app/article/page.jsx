@@ -37,11 +37,11 @@ export default function Article() {
                     <p className="text-gray-500 text-[16px]">{item.date}</p>
                   </div>
 
-                  <h1 className="text-primary text-[22px] font-medium">
+                  <h1 className="text-primary text-[18px] font-medium">
                     {item.title}
                   </h1>
 
-                  <p className="text-gray-500 text-[18px]">{item.desc}</p>
+                  <p className="text-gray-500 text-[16px] line">{item.desc}</p>
 
                   <Link
                     href={`/article/${item.slug}`}

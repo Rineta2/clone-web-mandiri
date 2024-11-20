@@ -20,7 +20,8 @@ export const articleData = [
         title: "Pengumuman Relokasi (Pemindahan Alamat Jaringan Kantor) dan Penutupan Jaringan Kantor",
         hightlight: "MANDIRI HIGHLIGHT",
         desc: "Untuk memberikan pelayanan yang baik, dengan ini kami beritahukan pelaksanaan pengalihan dan atau pemindahan Kantor Cabang Pembantu (KCP) dengan klik detail informasi sebagai berikut:",
-        img: null,
+        img: [
+        ],
         link: [
           {
             id: 1,
@@ -54,16 +55,22 @@ export const articleData = [
         ],
         text: [],
         content: [],
-        download: null
+        download: [
+          {
+            id: 1,
+            name: null,
+            path: "#"
+          }
+        ]
       }
     ]
   },
 
   {
     id: 2,
-    img: img2,
     type: "Economic Review",
     date: "14 Nov 2024",
+    img: img2,
     title: "DAILY ECONOMIC AND MARKET REVIEW",
     desc: "Kinerja Penjualan Eceran Diperkirakan Meningkat pada Oktober 2024",
     name: "Selengkapnya",
@@ -74,7 +81,13 @@ export const articleData = [
         title: "DAILY ECONOMIC AND MARKET REVIEW",
         hightlight: "ECONOMIC REVIEW",
         desc: null,
-        img: img2,
+        img: [
+          {
+            id: 1,
+            img: img2,
+            title: "DAILY ECONOMIC AND MARKET REVIEW"
+          }
+        ],
         text: [
           {
             id: 1,
@@ -91,6 +104,7 @@ export const articleData = [
             title: "November, 19, 2024 | Daily Economic Review: Utang Luar Negeri Meningkat 8,3% yoy Pada 3Q2024 "
           }
         ],
+
         link: [],
         content: [
           {
@@ -148,7 +162,13 @@ export const articleData = [
         title: "Super! Bank Mandiri Bawa Solusi Perbankan Digital dan Reward Menarik bagi Diaspora di Houston, AS",
         hightlight: "NEWS & RELEASE",
         desc: null,
-        img: img4,
+        img: [
+          {
+            id: 1,
+            img: img4,
+            title: "Super! Bank Mandiri Bawa Solusi Perbankan Digital dan Reward Menarik bagi Diaspora di Houston, AS"
+          }
+        ],
         text: [
           {
             id: 1,
@@ -216,13 +236,13 @@ export const articleData = [
           },
 
           {
-            id: 8,
+            id: 9,
             title: null,
             desc: "Bukan hanya itu saja, Bank Mandiri juga memperluas layanan mata uang Tabungan Multicurrency yang kini tersedia dalam 14 pilihan mata uang. Hal tersebut juga yang menarik perhatian para mengunjung event International Expo di Hong Kong yang menghadirkan pengusaha UMKM dari Indonesia.",
           },
 
           {
-            id: 9,
+            id: 10,
             title: null,
             desc: "Sebagai informasi, sejak diluncurkan pada Oktober 2021, Livin’ by Mandiri telah menunjukkan pertumbuhan yang mengesankan. Hingga kuartal III 2024, pengguna aplikasi Livin' by Mandiri menembus angka 27,6 juta pengguna, naik 32% secara year on year (YoY). Adapun, dari jumlah tersebut, total nilai transaksi Livin' by Mandiri telah mencapai Rp2.940 triliun dengan frekuensi transaksi 2,7 miliar transaksi.",
           },
