@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { bungaProduk, deposito } from "@/components/ui/data/suku-bunga/data";
+import {
+  bungaProduk,
+  deposito,
+} from "@/components/ui/data/kalkulator/suku-bunga/data";
 
 export function ProductSelection() {
   return (

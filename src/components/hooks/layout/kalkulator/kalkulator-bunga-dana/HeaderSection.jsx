@@ -1,6 +1,8 @@
 import React from "react";
+
 import Image from "next/image";
-import { homeSukuBunga } from "@/components/ui/data/suku-bunga/data";
+
+import { homeSukuBunga } from "@/components/ui/data/kalkulator/suku-bunga/data";
 
 export function HeaderSection() {
   return (

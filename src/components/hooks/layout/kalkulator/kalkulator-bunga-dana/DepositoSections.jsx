@@ -8,7 +8,7 @@ import {
   depositRatesDibayarBulananJatuhTempo,
   depositRatesDibayarDiMukaSGD,
   depositRatesValasNonUSD,
-} from "@/components/ui/data/suku-bunga/data";
+} from "@/components/ui/data/kalkulator/suku-bunga/data";
 
 export function DepositoSections() {
   const renderTable = (title, data) => (

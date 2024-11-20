@@ -7,7 +7,7 @@ import {
   GiroRegulerValutaSGD,
   GiroRegulerValutaCNY,
   GiroRegulerValutaNonUSD,
-} from "@/components/ui/data/suku-bunga/data";
+} from "@/components/ui/data/kalkulator/suku-bunga/data";
 
 export function GiroRegulerSections() {
   const renderTable = (title, headers, data) => (

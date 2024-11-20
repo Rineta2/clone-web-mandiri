@@ -17,7 +17,7 @@ import {
   MandiriTabunganRupiah,
   MandiriTabunganMulticurrency,
   MandiriTabunganSimpananPelajar,
-} from "@/components/ui/data/suku-bunga/data";
+} from "@/components/ui/data/kalkulator/suku-bunga/data";
 
 export function TabunganSections() {
   const renderTable = (title, data) => (
