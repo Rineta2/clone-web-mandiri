@@ -5,19 +5,17 @@ import Link from "next/link";
 export default function LanguageSwitcher() {
   return (
     <div className="flex gap-3 relative">
-      <Link
-        href="/"
-        locale="id"
+      <button
         className={`text-primary hover:text-primary/80 transition-colors`}
       >
         ID
-      </Link>
+      </button>
       <div className="absolute top-1 left-8 w-[1px] h-4 bg-foreground opacity-80"></div>
-      <Link
-        href="/"
-        locale="en"
+      <button
         className={`text-primary hover:text-primary/80 transition-colors`}
-      ></Link>
+      >
+        EN
+      </button>
     </div>
   );
 }

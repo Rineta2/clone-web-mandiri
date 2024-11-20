@@ -68,14 +68,14 @@ export default function CalculatorMenu({ isOpen, onClick }) {
               </Link>
 
               <Link
-                href="/pages/kalkulator/kalkulator-kpr"
+                href="https://www.bankmandiri.co.id/web/guest/kalkulator-kpr"
                 className="flex items-center text-left text-background text-[14px]"
               >
                 Kalkulator KPR <ChevronRight size={16} />
               </Link>
 
               <Link
-                href="/pages/kalkulator/kalkulator-kta"
+                href="#"
                 className="flex items-center text-left text-background text-[14px]"
               >
                 Kalkulator KTA <ChevronRight size={16} />
@@ -88,7 +88,7 @@ export default function CalculatorMenu({ isOpen, onClick }) {
               </button>
 
               <Link
-                href="/pages/tarif/tarif-layanan"
+                href="https://www.bankmandiri.co.id/web/guest/tarif-layanan"
                 className="flex items-center text-left text-background text-[14px]"
               >
                 Tarif Layanan <ChevronRight size={16} />
