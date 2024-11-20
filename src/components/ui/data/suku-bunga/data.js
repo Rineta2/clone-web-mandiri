@@ -1,5 +1,4 @@
 import imgSukuBungaDasar from "@/components/assest/navinner/suku-bunga/bg.jpg";
-import React, { Fragment } from "react";
 
 export const homeSukuBunga = [
   {
@@ -597,7 +596,7 @@ export const MandiriTabunganValasNonUSD = [
 
 export const MandiriRencanaUSD = [
   { range: "< USD 100", interestRate: 0.20 },
-  { range: "�� USD 100", interestRate: 0.20 },
+  { range: " USD 100", interestRate: 0.20 },
 ];
 
 export const MandiriTabunganRupiah = [
@@ -612,4 +611,66 @@ export const MandiriTabunganMulticurrency = [
 
 export const MandiriTabunganSimpananPelajar = [
   { range: "Semua Tier", interestRate: "0%" },
+];
+
+export const giroReguler = [
+  {
+    name: "Giro Reguler Rupiah",
+    path: "#deposito-rupiah-bunga-dibayar-bulanan-dan-jatuh-tempo",
+  },
+
+  {
+    name: "Giro Reguler Valuta USD",
+    path: "#deposito-rupiah-bunga-dibayar-di-muka",
+  },
+
+  {
+    name: "Giro Reguler Valuta SGD",
+    path: "#deposito-usd-dengan-bunga-dibayar-bulanan-dan-jatuh-tempo",
+  },
+
+  {
+    name: "Giro Reguler Valuta CNY",
+    path: "#deposito-sgd-dengan-bunga-dibayar-bulanan-dan-jatuh-tempo",
+  },
+
+  {
+    name: "Giro Reguler Valuta Non USD, SGD, dan CNY",
+    path: "#deposito-usd-dengan-bunga-dibayar-di-muka",
+  },
+];
+
+export const GiroRegulerRupiah = [
+  { range: "0 - < Rp 10 Juta", interestRate: 0.00 },
+  { range: "Rp 10 Juta - < Rp 100 Juta", interestRate: 0.25 },
+  { range: "Rp 100 Juta - < Rp 500 Juta", interestRate: 1.00 },
+  { range: "Rp 500 Juta - < Rp 1 Miliar", interestRate: 1.25 },
+  { range: "≥ Rp 1 Miliar", interestRate: 1.90 },
+];
+
+export const GiroRegulerValutaUSD = [
+  { range: "< 100.000 USD", interestRate: 0.00 },
+  { range: "> 100.000 USD", interestRate: 0.10 },
+];
+
+export const GiroRegulerValutaSGD = [
+  { range: "< 1.000 SGD", interestRate: 0.00 },
+  { range: "> 1.000 SGD - < 20.000 SGD", interestRate: 0.15 },
+  { range: "> 20.000 SGD - < 200.000 SGD", interestRate: 0.25 },
+  { range: "< 200.000 SGD", interestRate: 0.25 },
+];
+
+export const GiroRegulerValutaCNY = [
+  { range: "< 10.000 CNY", interestRate: 0.00 },
+  { range: "> 10.000 CNY - 100.000 CNY", interestRate: 0.15 },
+  { range: "> 100.000 CNY", interestRate: 0.20 },
+];
+
+export const GiroRegulerValutaNonUSD = [
+  { currency: "AUD", interestRate: 0.00 },
+  { currency: "CHF", interestRate: 0.00 },
+  { currency: "EUR", interestRate: 0.10 },
+  { currency: "GBP", interestRate: 0.10 },
+  { currency: "HKD", interestRate: 0.00 },
+  { currency: "JPY", interestRate: 0.00 },
 ];

@@ -28,6 +28,12 @@ import {
   MandiriTabunganRupiah,
   MandiriTabunganMulticurrency,
   MandiriTabunganSimpananPelajar,
+  giroReguler,
+  GiroRegulerValutaUSD,
+  GiroRegulerRupiah,
+  GiroRegulerValutaSGD,
+  GiroRegulerValutaCNY,
+  GiroRegulerValutaNonUSD,
 } from "@/components/ui/data/suku-bunga/data";
 
 import Image from "next/image";
@@ -937,6 +943,181 @@ export default function SukuBungaDana() {
                 {MandiriTabunganSimpananPelajar.map((tier, index) => (
                   <tr key={index} className="border-b border-gray-300">
                     <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="giro-reguler" className="py-10">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="mb-5 mt-14">
+            <h3 className="text-4xl font-bold mb-4">Giro Reguler</h3>
+            <p className="text-lg text-gray-500">
+              Pilih suku bunga produk Giro Reguler :
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            {giroReguler.map((item) => {
+              return (
+                <Link
+                  key={item.id}
+                  href={item.path}
+                  className="bg-[#18406e] text-white px-4 py-2 text-[1.2rem] rounded-md"
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Giro Reguler Rupiah
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {GiroRegulerRupiah.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Giro Reguler Valuta USD
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {GiroRegulerValutaUSD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Giro Reguler Valuta SGD
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {GiroRegulerValutaSGD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Giro Reguler Valuta CNY
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {GiroRegulerValutaCNY.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Giro Reguler Valuta Non USD, SGD, dan CNY
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Valuta
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {GiroRegulerValutaNonUSD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.currency}</td>
                     <td className="px-6 py-3 text-gray-700">
                       {tier.interestRate}
                     </td>
