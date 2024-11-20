@@ -23,6 +23,11 @@ import {
   MandiriTabunganTKI,
   MandiriTabunganValasSGD,
   MandiriTabunganValasUSD,
+  MandiriTabunganValasNonUSD,
+  MandiriRencanaUSD,
+  MandiriTabunganRupiah,
+  MandiriTabunganMulticurrency,
+  MandiriTabunganSimpananPelajar,
 } from "@/components/ui/data/suku-bunga/data";
 
 import Image from "next/image";
@@ -780,6 +785,156 @@ export default function SukuBungaDana() {
 
               <tbody>
                 {MandiriTabunganValasUSD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Tabungan Multicurrency
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {MandiriTabunganValasNonUSD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Tabungan Rencana USD
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {MandiriRencanaUSD.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              TabunganKu
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {MandiriTabunganRupiah.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Tabungan SiMakmur - Laku Pandai
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {MandiriTabunganMulticurrency.map((tier, index) => (
+                  <tr key={index} className="border-b border-gray-300">
+                    <td className="px-6 py-3 text-gray-700">{tier.range}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {tier.interestRate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-3xl text-secondary mt-[5%] mb-[2%]">
+              Tabungan Simpanan Pelajar
+            </h3>
+
+            <table className="min-w-full border border-gray-300 rounded-lg">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Tier
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                    Suku Bunga*
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {MandiriTabunganSimpananPelajar.map((tier, index) => (
                   <tr key={index} className="border-b border-gray-300">
                     <td className="px-6 py-3 text-gray-700">{tier.range}</td>
                     <td className="px-6 py-3 text-gray-700">

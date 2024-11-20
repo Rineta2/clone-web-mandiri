@@ -565,3 +565,51 @@ export const MandiriTabunganValasUSD = [
   { range: "HKD", interestRate: 0.00 },
   { range: "JPY", interestRate: 0.00 },
 ];
+
+export const MandiriTabunganValasNonUSD = [
+  // USD
+  { range: "< USD 100", interestRate: "0.00%" },
+  { range: "≥ USD 100 - < USD 10,000", interestRate: "0.10%" },
+  { range: "≥ USD 10,000 - < USD 200,000", interestRate: "0.20%" },
+  { range: "≥ USD 200,000", interestRate: "0.20%" },
+
+  // SGD
+  { range: "< SGD 200", interestRate: "0.00%" },
+  { range: "≥ SGD 200 - < SGD 10,000", interestRate: "0.10%" },
+  { range: "≥ SGD 10,000 - < SGD 100,000", interestRate: "0.25%" },
+  { range: "≥ SGD 100,000", interestRate: "0.50%" },
+
+  // EUR
+  { range: "≤ EUR 1,000", interestRate: "0.00%" },
+  { range: "> EUR 1,000", interestRate: "0.10%" },
+
+  // GBP
+  { range: "GBP 0-1,000", interestRate: "0.00%" },
+  { range: "GBP >1,000", interestRate: "0.05%" },
+
+  // AUD
+  { range: "AUD 0-1,000", interestRate: "0.00%" },
+  { range: "AUD >1,000", interestRate: "0.10%" },
+
+  // CHF, HKD, JPY, MYR, THB, SAR, CNY, CAD, NZD
+  { range: "CHF, HKD, JPY, MYR, THB, SAR, CNY, CAD, NZD - All Tier", interestRate: "0.00%" },
+];
+
+export const MandiriRencanaUSD = [
+  { range: "< USD 100", interestRate: 0.20 },
+  { range: "�� USD 100", interestRate: 0.20 },
+];
+
+export const MandiriTabunganRupiah = [
+  { range: "Rp 0 - Rp 500.000", interestRate: "0.00%" },
+  { range: "Rp 500.001 - Rp 1.000.000", interestRate: "0.10%" },
+  { range: "> Rp 1.000.000", interestRate: "0.10%" },
+];
+
+export const MandiriTabunganMulticurrency = [
+  { range: "Semua Tier", interestRate: "0.10%" },
+];
+
+export const MandiriTabunganSimpananPelajar = [
+  { range: "Semua Tier", interestRate: "0%" },
+];
