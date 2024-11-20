@@ -39,6 +39,7 @@ body {
 
 html {
   font-size: 85%;
+  scroll-behavior: smooth;
 }
 
 @keyframes slide-up {
